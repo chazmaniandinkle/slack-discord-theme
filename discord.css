@@ -36,6 +36,7 @@ limitations under the License.
 
    --scrollbar-background: #202225;
    --scrollbar-border: #202225;
+   --scrollbar-track: #2F3136
 
    --input-background: #484B51;
    --message-separator: #3E4147;
@@ -241,9 +242,11 @@ ts-jumper input[type="text"],
 .p-channel_sidebar__link--selected:visited,
 .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
-   background-color: var(--background) !important;
-   border: solid var(--border-bright);
+   background-color: var(--input-background) !important;
+   border: transparent;
    border-width: 1px 1px 1px 0;
+   color: var(--text-bright) !important;
+   font-weight: 900;
 }
 
 .p-channel_sidebar__channel:hover,

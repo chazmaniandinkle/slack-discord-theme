@@ -1567,5 +1567,5 @@ ts-jumper .p-jumper__help {
 div.c-message__reply_bar:hover,
 .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
 .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
-  background: var(--background-hover);
+  background: var(--background);
 }

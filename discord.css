@@ -105,6 +105,11 @@ body:not(.loading) #team_menu:active {
    background-color: var(--background-elevated) !important;
 }
 
+/* nudge the scrollbar to the left a couple of pixels */
+.c-scrollbar__bar {
+  left: 2px;
+}
+
 /* ---------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4 {
@@ -331,7 +336,7 @@ li.active[class] span,
 
 /* new scrollbar */
 .p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
-  background: var(--background-elevated);
+  background: var(--scrollbar-background);
   border: 1px solid var(--scrollbar-border);
 }
 
@@ -1406,7 +1411,7 @@ nav {
 }
 /* scrollbar */
 .c-scrollbar__bar {
-    background: var(--scrollbar-background);
+  background: var(--scrollbar-background);
 	border: 1px solid var(--scrollbar-border);
 }
 /* actions */

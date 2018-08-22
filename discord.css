@@ -27,7 +27,7 @@ limitations under the License.
    --background-hover: #3B3F45;
    --background-light: #AAA;
    --background-bright: #FFF;
-   --background-popup: #282B30
+   --background-popup: #282B30;
 
    --border-dim: #202225;
    --border-bright: var(--primary);
@@ -93,11 +93,11 @@ div#search_container.c-react_search_input {
 .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
 .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
     border-bottom: 1px solid;
-    border-color: var(--team-picker);
+    border-color: var(--team-picker) !important;
 }
 
 /* change team menu header color on hover */
-#team_menu:hover,
+body:not(.loading) #team_menu:hover,
 body:not(.loading) #team_menu:active {
   background-color: var(--background-popup) !important;
 }

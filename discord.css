@@ -1584,3 +1584,8 @@ div.c-message__reply_bar:hover,
 .popover_mask {
   background-color: transparent;
 }
+
+/* fix text colors on notification preferences dialogue */
+.channel_prefs_body__section_header_title, .channel_prefs__muting_checkbox_label:not(.subtle_silver), .channel_prefs_notifications_table, .notification_prefs_icon:before {
+  color: var(--text);
+}

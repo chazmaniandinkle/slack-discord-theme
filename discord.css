@@ -97,8 +97,12 @@ div#search_container.c-react_search_input {
 }
 
 /* change team menu header color on hover */
-#team_menu:hover {
+#team_menu:hover,
+body:not(.loading) #team_menu:active {
   background-color: var(--background-popup) !important;
+}
+#team_menu {
+   background-color: var(--background-elevated) !important;
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -142,12 +146,6 @@ div.client_channels_list_container {
 nav.p-channel_sidebar {
    background-color: var(--background-elevated);
    color: var(--text-read);
-}
-
-#team_menu,
-/* body:not(.loading) #team_menu:hover, */
-body:not(.loading) #team_menu:active {
-   background-color: var(--background-elevated);
 }
 
 .p-channel_sidebar__channel,

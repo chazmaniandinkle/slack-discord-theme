@@ -69,7 +69,7 @@ limitations under the License.
 }
 
 /* Removing background behind preview text in search bar */
-div#search_container.c-react_search_input {
+div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
   background-color: var(--input-background);
   border-color: transparent;
 }

@@ -84,14 +84,9 @@ div#search_container.c-react_search_input {
   color: var(--text);
 }
 
-/* change team menu header color on hover */
-#team_menu:hover {
-  background-color: var(--background-popup) !important;
-}
-
 /* add thin bottom border to channel header pane */
 #team_menu {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     border-bottom: 1px solid;
     border-color: var(--team-picker) !important;
 }
@@ -100,6 +95,12 @@ div#search_container.c-react_search_input {
     border-bottom: 1px solid;
     border-color: var(--team-picker);
 }
+
+/* change team menu header color on hover */
+#team_menu:hover {
+  background-color: var(--background-popup) !important;
+}
+
 /* ---------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4 {
@@ -146,7 +147,7 @@ nav.p-channel_sidebar {
 #team_menu,
 /* body:not(.loading) #team_menu:hover, */
 body:not(.loading) #team_menu:active {
-   background-color: var(--background-elevated) !important;
+   background-color: var(--background-elevated);
 }
 
 .p-channel_sidebar__channel,

@@ -27,6 +27,7 @@ limitations under the License.
    --background-hover: #3B3F45;
    --background-light: #AAA;
    --background-bright: #FFF;
+   --background-popup: #282B30
 
    --border-dim: #202225;
    --border-bright: var(--primary);
@@ -82,6 +83,23 @@ div#search_container.c-react_search_input {
 .bot_message .message_sender, .bot_message .message_sender a{
   color: var(--text);
 }
+
+/* change team menu header color on hover */
+#team_menu:hover {
+  background-color: var(--background-popup) !important;
+}
+
+/* add thin bottom border to channel header pane */
+#team_menu {
+    padding-bottom: 6px;
+    border-bottom: 1px solid;
+    border-color: var(--team-picker) !important;
+}
+.p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
+    border-bottom: 1px solid;
+    border-color: var(--team-picker);
+}
 /* ---------------------------------------------------------------------------------- */
 
 h1, h2, h3, h4 {
@@ -126,7 +144,7 @@ nav.p-channel_sidebar {
 }
 
 #team_menu,
-body:not(.loading) #team_menu:hover,
+/* body:not(.loading) #team_menu:hover, */
 body:not(.loading) #team_menu:active {
    background-color: var(--background-elevated) !important;
 }
@@ -1004,7 +1022,8 @@ div::-webkit-scrollbar-thumb {
    border: 0 1px 1px 1px solid var(--border-bright) !important;
 }
 
-#team_menu, #quick_switcher_btn, #team_menu_overlay, #col_channels_overlay {
+/* #team_menu, */
+#quick_switcher_btn, #team_menu_overlay, #col_channels_overlay {
    border-color: transparent !important;
 }
 
@@ -1580,9 +1599,9 @@ div.c-message__reply_bar:hover,
   background-color: transparent;
 }
 
-/* remove background from popover mask */
-.popover_mask {
-  background-color: transparent;
+/* adding background back to menus by hacking the box shadow */
+div#menu {
+  box-shadow: 0px 0px 0px 2000px rgba(0,0,0,0.3);
 }
 
 /* fix text colors on notification preferences dialogue */

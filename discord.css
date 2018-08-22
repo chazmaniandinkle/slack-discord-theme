@@ -1574,3 +1574,8 @@ div.c-message__reply_bar:hover,
 .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
   background: var(--background);
 }
+
+/* remove background from popover mask */
+.popover_mask {
+  background-color: transparent;
+}

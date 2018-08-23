@@ -15,32 +15,27 @@ limitations under the License.
 */
 
 :root {
-   /* Modify these to change your theme colors: */
-   --primary: #61AFEF;
-   --text: #DADBDC;
-   --text-read: #72767D;
-   --background: #36393F;
-   --background-elevated: #2F3136;
-   --team-picker: #202225;
+  --primary: rgb(97, 175, 239);
+  --text: rgb(220, 221, 222);
+  --text-read: rgb(114, 118, 125);
+  --background: rgb(53, 56, 63);
+  --background-elevated: rgb(47, 49, 54);
+  --team-picker: rgb(32, 34, 37);
 
-   /* These should be less important: */
-   --background-hover: #3B3F45;
-   --background-light: #AAA;
-   --background-bright: #FFF;
-   --background-popup: #282B30;
-
-   --border-dim: #202225;
-   --border-bright: var(--primary);
-
-   --text-bright: #DCDDDE;
-   --text-special: var(--primary);
-
-   --scrollbar-background: #202225;
-   --scrollbar-border: #202225;
-   --scrollbar-track: #2F3136;
-
-   --input-background: #484B51;
-   --message-separator: #3E4147;
+  --background-hover: rgb(59, 63, 69);
+  --background-light: rgb(170, 170, 170);
+  --background-bright: rgb(255, 255, 255);
+  --background-popup: rgb(40, 43, 48);
+  --border-dim: rgb(32, 34, 37);
+  --border-bright: var(--primary);
+  --text-bright: rgb(220, 221, 222);
+  --text-special: var(--primary);
+  --scrollbar-background: rgb(38, 40, 44);
+  --scrollbar-border: var(--scrollbar-background);
+  --scrollbar-track: rgb(47, 49, 54);
+  --input-background: rgb(72, 75, 81);
+  --message-separator: rgb(62, 65, 71);
+}
 }
 
 /* ---------------------------------------------------------------------------------- */

@@ -4,7 +4,7 @@ A theme to make Slack look like Discord.
 
 # Preview
 
-![Screenshot](https://user-images.githubusercontent.com/357329/44598318-9e76ec80-a7a0-11e8-8ae7-3576d888214b.png)
+![Screenshot](https://user-images.githubusercontent.com/357329/44598396-e6960f00-a7a0-11e8-9947-361e1c4023aa.png)
 
 # Installing into Slack
 

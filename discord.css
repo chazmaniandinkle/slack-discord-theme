@@ -151,7 +151,7 @@ div.client_channels_list_container {
 }
 
 nav.p-channel_sidebar {
-   background-color: var(--input-background);
+   background-color: var(--background-elevated);
    color: var(--text-read);
 }
 
@@ -263,6 +263,14 @@ ts-jumper input[type="text"],
   color: var(--text);
 }
 
+.p-channel_sidebar__channel:hover,
+.p-channel_sidebar__link:hover{
+   background-color: var(--background-hover) !important;
+   border-color: transparent;
+   color: var(--text) !important;
+   height: 24px !important;
+}
+
 .p-channel_sidebar__channel--selected,
 .p-channel_sidebar__link--selected,
 .p-channel_sidebar__channel--selected:link,
@@ -271,19 +279,11 @@ ts-jumper input[type="text"],
 .p-channel_sidebar__link--selected:visited,
 .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
-   background-color: var(--background-elevated) !important;
+   background-color: var(--input-background) !important;
    border: transparent;
    border-width: 1px 1px 1px 0;
    color: var(--text-bright) !important;
    font-weight: 900;
-}
-
-.p-channel_sidebar__channel:hover,
-.p-channel_sidebar__link:hover{
-   background-color: var(--background-hover) !important;
-   border-color: transparent;
-   color: var(--text) !important;
-   height: 24px !important;
 }
 
 .p-channel_sidebar__close_container {
@@ -306,18 +306,18 @@ li.active[class] span,
    opacity: 1;
 }
 
-/*"more unreads" bottom*/
+/*"more unreads" top*/
 .p-channel_sidebar__banner--top {
-   background-color: var(--background);
-   border: 1px solid var(--border-bright);
+   background-color: var(--scrollbar-background);
+   border: 1px solid var(--text);
    border-top: none;
    border-radius: 0 0 15px 15px;
 }
 
 /*"more unreads" bottom */
 .p-channel_sidebar__banner--bottom {
-   background-color: var(--background);
-   border: 1px solid var(--border-bright);
+   background-color: var(--scrollbar-background);
+   border: 1px solid var(--text);
    border-bottom: none;
    border-radius: 15px 15px 0 0;
 }
@@ -337,9 +337,12 @@ li.active[class] span,
 }
 
 /* new scrollbar */
-.p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
+.p-channel_sidebar div.c-custom_scrollbar__thumb_vertical,
+.p-channel_sidebar div.c-scrollbar__bar {
   background: var(--scrollbar-background);
   border: 1px solid var(--scrollbar-border);
+  width: 5px;
+  left: 4px
 }
 
 #channels_scroller.show_which_channel_is_active[class] li.active .presence.active i.presence_icon,

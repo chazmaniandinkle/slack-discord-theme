@@ -290,11 +290,11 @@ ts-jumper input[type="text"],
    background: none !important;
 }
 
-.p-channel_sidebar__channel--selected:hover,
+/* .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
    border: solid var(--border-dim);
    border-width: 1px 1px 1px 0;
-}
+} */
 
 /*broken*/
 li.active[class] span,

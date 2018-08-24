@@ -151,7 +151,7 @@ div.client_channels_list_container {
 }
 
 nav.p-channel_sidebar {
-   background-color: var(--background-elevated);
+   background-color: var(--input-background);
    color: var(--text-read);
 }
 

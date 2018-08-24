@@ -19,7 +19,7 @@ limitations under the License.
   --text: rgb(220, 221, 222);
   --text-read: rgb(114, 118, 125);
   --background: rgb(53, 56, 63);
-  --background-elevated: rgb(47, 49, 54);
+  --background-elevated: rgb(46, 48, 54);
   --team-picker: rgb(32, 34, 37);
 
   --background-hover: rgb(59, 63, 69);
@@ -35,7 +35,8 @@ limitations under the License.
   --scrollbar-track: rgb(47, 49, 54);
   --input-background: rgb(72, 75, 81);
   --message-separator: rgb(62, 65, 71);
-}
+  --notification: rgba(108, 130, 203, 0.9);
+  --channel-active: rgb(65,69,77);
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -205,7 +206,7 @@ ts-jumper input[type="text"],
 .p-channel_sidebar__link--selected:visited,
 .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
-   background-color: var(--input-background) !important;
+   background-color: var(--channel-active) !important;
    border: transparent;
    border-width: 1px 1px 1px 0;
    color: var(--text-bright) !important;
@@ -234,7 +235,7 @@ li.active[class] span,
 
 /*"more unreads" top*/
 .p-channel_sidebar__banner--top {
-   background-color: var(--scrollbar-background);
+   background-color: var(--notification);
    border: 1px solid var(--text);
    border-top: none;
    border-radius: 0 0 15px 15px;
@@ -242,7 +243,7 @@ li.active[class] span,
 
 /*"more unreads" bottom */
 .p-channel_sidebar__banner--bottom {
-   background-color: var(--scrollbar-background);
+   background-color: var(--notification);
    border: 1px solid var(--text);
    border-bottom: none;
    border-radius: 15px 15px 0 0;

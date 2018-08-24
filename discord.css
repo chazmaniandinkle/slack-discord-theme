@@ -1545,6 +1545,14 @@ div#menu {
   color: var(--text) !important;
 }
 
+/* removing limited history pane */
+.p-message_pane__limited_history_foreword {
+  visibility: hidden;
+  padding: unset;
+  height: 0px;
+  margin-bottom: 0px;
+}
+
 /* ---------------------------------------------------------------------------------- */
 /* discord theme specific settings */
 
@@ -1618,3 +1626,7 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
   background-color: var(--input-background);
   border-color: transparent;
 }
+
+/* changing color of unread messages banner */
+.p-message_pane__unread_banner {
+  background: var(--notification);

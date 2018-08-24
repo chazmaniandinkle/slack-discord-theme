@@ -15,94 +15,28 @@ limitations under the License.
 */
 
 :root {
-   /* Modify these to change your theme colors: */
-   --primary: #61AFEF;
-   --text: #DADBDC;
-   --text-read: #72767D;
-   --background: #36393F;
-   --background-elevated: #2F3136;
-   --team-picker: #202225;
+  --primary: rgb(97, 175, 239);
+  --text: rgb(220, 221, 222);
+  --text-read: rgb(114, 118, 125);
+  --background: rgb(53, 56, 63);
+  --background-elevated: rgb(46, 48, 54);
+  --team-picker: rgb(32, 34, 37);
 
-   /* These should be less important: */
-   --background-hover: #3B3F45;
-   --background-light: #AAA;
-   --background-bright: #FFF;
-   --background-popup: #282B30;
-
-   --border-dim: #202225;
-   --border-bright: var(--primary);
-
-   --text-bright: #DCDDDE;
-   --text-special: var(--primary);
-
-   --scrollbar-background: #202225;
-   --scrollbar-border: #202225;
-   --scrollbar-track: #2F3136;
-
-   --input-background: #484B51;
-   --message-separator: #3E4147;
-}
-
-/* ---------------------------------------------------------------------------------- */
-/* discord theme specific settings */
-
-/* message separators */
-.c-message {
-	border-top: solid;
-	border-top-width: 1px;
-	border-top-color: var(--message-separator);
-}
-
-/* adjust avatar spacing */
-.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter {
-	padding-right: 8px;
-	width: 60px;
-}
-.c-message--light .c-message__content {
-	margin-left: 68px;
-}
-.c-avatar__emoji, .c-avatar__image {
-	border-radius: 20px;
-	display: block;
-	height: 100% !important;
-	width: 100% !important;
-}
-
-/* Removing background behind preview text in search bar */
-div#search_container.c-react_search_input {
-  background-color: var(--input-background);
-  border-color: transparent;
-}
-
-.search_form, .search_form:hover {
-  border: 1px solid var(--input-background);
-  border-color: transparent;
-}
-
-/* set bot username to same color as others */
-.bot_message .message_sender, .bot_message .message_sender a{
-  color: var(--text);
-}
-
-/* add thin bottom border to channel header pane */
-#team_menu {
-    padding-bottom: 5px;
-    border-bottom: 1px solid;
-    border-color: var(--team-picker) !important;
-}
-.p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
-.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
-    border-bottom: 1px solid;
-    border-color: var(--team-picker) !important;
-}
-
-/* change team menu header color on hover */
-body:not(.loading) #team_menu:hover,
-body:not(.loading) #team_menu:active {
-  background-color: var(--background-popup) !important;
-}
-#team_menu {
-   background-color: var(--background-elevated) !important;
+  --background-hover: rgb(59, 63, 69);
+  --background-light: rgb(170, 170, 170);
+  --background-bright: rgb(255, 255, 255);
+  --background-popup: rgb(40, 43, 48);
+  --border-dim: rgb(32, 34, 37);
+  --border-bright: var(--primary);
+  --text-bright: rgb(220, 221, 222);
+  --text-special: var(--primary);
+  --scrollbar-background: rgb(38, 40, 44);
+  --scrollbar-border: var(--scrollbar-background);
+  --scrollbar-track: rgb(47, 49, 54);
+  --input-background: rgb(72, 75, 81);
+  --message-separator: rgb(62, 65, 71);
+  --notification: rgba(108, 130, 203, 0.9);
+  --channel-active: rgb(65,69,77);
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -191,7 +125,7 @@ ts-jumper input[type="text"],
 }
 
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight), .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-    background-color: var(--background-hover);
+    background-color: var(--background);
 }
 .c-message--light .c-message__sender .c-message__sender_link {
     color: var(--text);
@@ -224,9 +158,9 @@ ts-jumper input[type="text"],
     background-color: var(--border-dim);
 }
 
-.c-message_attachment__border {
+/* .c-message_attachment__border {
 	background-color: var(--background-elevated) !important;
-}
+} */
 .c-member_slug--link {
     background: var(--background-elevated);
 }
@@ -248,27 +182,12 @@ ts-jumper input[type="text"],
 /* channel list */
 .p-channel_sidebar__channel,
 .p-channel_sidebar__link {
-  border-radius: 0 15px 15px 0;
+  /* border-radius: 0 15px 15px 0; */
   height: 24px !important;
 }
 
 .p-channel_sidebar__channel a {
   color: var(--text);
-}
-
-.p-channel_sidebar__channel--selected,
-.p-channel_sidebar__link--selected,
-.p-channel_sidebar__channel--selected:link,
-.p-channel_sidebar__link--selected:link,
-.p-channel_sidebar__channel--selected:visited,
-.p-channel_sidebar__link--selected:visited,
-.p-channel_sidebar__channel--selected:hover,
-.p-channel_sidebar__link--selected:hover {
-   background-color: var(--input-background) !important;
-   border: transparent;
-   border-width: 1px 1px 1px 0;
-   color: var(--text-bright) !important;
-   font-weight: 900;
 }
 
 .p-channel_sidebar__channel:hover,
@@ -279,15 +198,30 @@ ts-jumper input[type="text"],
    height: 24px !important;
 }
 
+.p-channel_sidebar__channel--selected,
+.p-channel_sidebar__link--selected,
+.p-channel_sidebar__channel--selected:link,
+.p-channel_sidebar__link--selected:link,
+.p-channel_sidebar__channel--selected:visited,
+.p-channel_sidebar__link--selected:visited,
+.p-channel_sidebar__channel--selected:hover,
+.p-channel_sidebar__link--selected:hover {
+   background-color: var(--channel-active) !important;
+   border: transparent;
+   border-width: 1px 1px 1px 0;
+   color: var(--text-bright) !important;
+   font-weight: 900;
+}
+
 .p-channel_sidebar__close_container {
    background: none !important;
 }
 
-.p-channel_sidebar__channel--selected:hover,
+/* .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
    border: solid var(--border-dim);
    border-width: 1px 1px 1px 0;
-}
+} */
 
 /*broken*/
 li.active[class] span,
@@ -299,18 +233,18 @@ li.active[class] span,
    opacity: 1;
 }
 
-/*"more unreads" bottom*/
+/*"more unreads" top*/
 .p-channel_sidebar__banner--top {
-   background-color: var(--background);
-   border: 1px solid var(--border-bright);
+   background-color: var(--notification);
+   border: 1px solid var(--text);
    border-top: none;
    border-radius: 0 0 15px 15px;
 }
 
 /*"more unreads" bottom */
 .p-channel_sidebar__banner--bottom {
-   background-color: var(--background);
-   border: 1px solid var(--border-bright);
+   background-color: var(--notification);
+   border: 1px solid var(--text);
    border-bottom: none;
    border-radius: 15px 15px 0 0;
 }
@@ -330,9 +264,12 @@ li.active[class] span,
 }
 
 /* new scrollbar */
-.p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
-  background: var(--background-elevated);
+.p-channel_sidebar div.c-custom_scrollbar__thumb_vertical,
+.p-channel_sidebar div.c-scrollbar__bar {
+  background: var(--scrollbar-background);
   border: 1px solid var(--scrollbar-border);
+  width: 5px;
+  left: 4px
 }
 
 #channels_scroller.show_which_channel_is_active[class] li.active .presence.active i.presence_icon,
@@ -1406,7 +1343,7 @@ nav {
 }
 /* scrollbar */
 .c-scrollbar__bar {
-    background: var(--scrollbar-background);
+  background: var(--scrollbar-background);
 	border: 1px solid var(--scrollbar-border);
 }
 /* actions */
@@ -1543,7 +1480,7 @@ nav {
 }
 
 /* message thumbs up */
-.c-reaction {
+.c-reaction, .c-reaction_add {
     background: var(--background);
     border: 1px solid var(--border-dim);
 }
@@ -1606,4 +1543,78 @@ div#menu {
 /* fix text colors on notification preferences dialogue */
 .channel_prefs_body__section_header_title, .channel_prefs__muting_checkbox_label:not(.subtle_silver), .channel_prefs_notifications_table, .notification_prefs_icon:before {
   color: var(--text) !important;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* discord theme specific settings */
+
+/* message separators */
+.c-message {
+	border-top: solid;
+	border-top-width: 1px;
+	border-top-color: var(--message-separator);
+}
+
+/* adjust avatar spacing */
+.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter {
+	padding-right: 8px;
+	width: 60px;
+}
+.c-message--light .c-message__content {
+	margin-left: 68px;
+}
+.c-avatar__emoji, .c-avatar__image {
+	border-radius: 20px;
+	display: block;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.search_form, .search_form:hover {
+  border: 1px solid var(--input-background);
+  border-color: transparent;
+}
+
+/* set bot username to same color as others */
+.bot_message .message_sender, .bot_message .message_sender a{
+  color: var(--text);
+}
+
+/* add thin bottom border to channel header pane */
+#team_menu {
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    border-color: var(--team-picker) !important;
+}
+.p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
+    border-bottom: 1px solid;
+    border-color: var(--team-picker) !important;
+}
+
+/* change team menu header color on hover */
+body:not(.loading) #team_menu:hover,
+body:not(.loading) #team_menu:active {
+  background-color: var(--background-popup) !important;
+}
+#team_menu {
+   background-color: var(--background-elevated) !important;
+}
+
+/* nudge the scrollbar to the left a couple of pixels */
+.c-scrollbar__bar {
+  left: 2px;
+}
+
+.p-channel_sidebar__channel, .p-channel_sidebar__link {
+  padding: 0 12px 0 8px;
+  width: 205px;
+  margin-left: 7px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* Removing background behind preview text in search bar */
+div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
+  background-color: var(--input-background);
+  border-color: transparent;
 }

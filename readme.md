@@ -1,6 +1,6 @@
-# Slack Black Theme
+# Discord Theme for Slack
 
-A theme to make Slack look like Discord.
+An extensive theme to make Slack look like Discord!
 
 # Preview
 

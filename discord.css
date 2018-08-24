@@ -151,7 +151,7 @@ div.client_channels_list_container {
 }
 
 nav.p-channel_sidebar {
-   background-color: var(--background-elevated);
+   background-color: var(--input-background);
    color: var(--text-read);
 }
 
@@ -271,7 +271,7 @@ ts-jumper input[type="text"],
 .p-channel_sidebar__link--selected:visited,
 .p-channel_sidebar__channel--selected:hover,
 .p-channel_sidebar__link--selected:hover {
-   background-color: var(--input-background) !important;
+   background-color: var(--background-elevated) !important;
    border: transparent;
    border-width: 1px 1px 1px 0;
    color: var(--text-bright) !important;

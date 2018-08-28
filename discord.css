@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 :root {
-  --primary: rgb(97, 175, 239);
+  --primary: rgba(108, 130, 203, 0.9);
   --text: rgb(220, 221, 222);
   --text-read: rgb(114, 118, 125);
   --background: rgb(53, 56, 63);
@@ -35,7 +35,7 @@ limitations under the License.
   --scrollbar-track: rgb(47, 49, 54);
   --input-background: rgb(72, 75, 81);
   --message-separator: rgb(62, 65, 71);
-  --notification: rgba(108, 130, 203, 0.9);
+  --notification: var(--primary);
   --channel-active: rgb(65,69,77);
 }
 
@@ -162,11 +162,12 @@ ts-jumper input[type="text"],
 	background-color: var(--background-elevated) !important;
 } */
 .c-member_slug--link {
-    background: var(--background-elevated);
+    background: var(--background);
+    color: var(--notification);
 }
 
 .channel_header, #col_messages, #footer {
-   box-shadow: none;
+    box-shadow: none;
 }
 /* buttons */
 .btn.disabled, .btn.disabled:active, .btn.disabled:hover, .btn:disabled, .btn:disabled:active, .btn:disabled:hover {
@@ -518,9 +519,9 @@ code {
   background-color: transparent !important;
 }
 
-a, a:link, a:visited{
+/* a, a:link, a:visited{
   color: var(--text-special);
-}
+} */
 ts-message a .mention{
   color: var(--text-special) !important;
 }
@@ -1551,6 +1552,10 @@ div#menu {
   margin-bottom: 0px;
 }
 
+.p-message_pane__foreword__description {
+  color: inherit;
+}
+
 /* ---------------------------------------------------------------------------------- */
 /* discord theme specific settings */
 
@@ -1625,6 +1630,7 @@ body:not(.loading) #team_menu:active {
 .p-emoji_picker__input_container,
 .p-emoji_picker__group_tab--active,
 .p-emoji_picker__skintone_btn_container,
+.p-emoji_picker__skintone_options,
 .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container {
   background: var(--background);
 }

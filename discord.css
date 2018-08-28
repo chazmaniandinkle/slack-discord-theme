@@ -1630,3 +1630,20 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
 /* changing color of unread messages banner */
 .p-message_pane__unread_banner {
   background: var(--notification);
+}
+
+/* Theming emoji picker popup */
+.p-emoji_picker__heading,
+.p-emoji_picker__list_container,
+.p-emoji_picker__input_container,
+.p-emoji_picker__group_tab--active,
+.p-emoji_picker__skintone_btn_container {
+  background: var(--background);
+}
+.c-menu.p-emoji_picker,
+.p-emoji_picker__footer {
+  background: var(--background-popup);
+}
+.p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container{
+  border: transparent;
+}

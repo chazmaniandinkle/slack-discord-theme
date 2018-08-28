@@ -1647,3 +1647,8 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
 .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container{
   border: transparent;
 }
+
+/* Coloring command completion text */
+.tab_complete_ui ul.type_cmds .cmdname{
+  color: var(--text-special);
+}

@@ -1098,14 +1098,10 @@ ts-jumper ts-jumper-container {
     background: var(--background-elevated);
 }
 /* new search modal */
-.c-search_autocomplete footer,
 .c-search,
-.c-search__tabs,
-.c-search__input_box { background-color: var(--input-background); }
-
-.c-search,
-.c-search__tabs,
-.c-search__input_and_close__close { color: unset; }
+.c-search__tabs {
+  color: unset;
+}
 .p-message_limit_banner {
     color: unset;
     background-color: unset;
@@ -1125,7 +1121,9 @@ ts-jumper ts-jumper-container {
 .token {
 	background-color: var(--background-elevated) !important;
 }
-.c-search_modal .popover>div { background-color: var(--background); }
+.c-search_modal .popover>div {
+  background-color: var(--background);
+}
 
 .c-search_autocomplete__suggestion_content {
     color: var(--text-bright);
@@ -1572,15 +1570,10 @@ div#menu {
 	margin-left: 68px;
 }
 .c-avatar__emoji, .c-avatar__image {
-	border-radius: 20px;
+	border-radius: 50%;
 	display: block;
 	height: 100% !important;
 	width: 100% !important;
-}
-
-.search_form, .search_form:hover {
-  border: 1px solid var(--input-background);
-  border-color: transparent;
 }
 
 /* set bot username to same color as others */
@@ -1621,12 +1614,6 @@ body:not(.loading) #team_menu:active {
   border-radius: 4px 4px 4px 4px;
 }
 
-/* Removing background behind preview text in search bar */
-div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
-  background-color: var(--input-background);
-  border-color: transparent;
-}
-
 /* changing color of unread messages banner */
 .p-message_pane__unread_banner {
   background: var(--notification);
@@ -1637,15 +1624,13 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
 .p-emoji_picker__list_container,
 .p-emoji_picker__input_container,
 .p-emoji_picker__group_tab--active,
-.p-emoji_picker__skintone_btn_container {
+.p-emoji_picker__skintone_btn_container,
+.p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container {
   background: var(--background);
 }
 .c-menu.p-emoji_picker,
 .p-emoji_picker__footer {
   background: var(--background-popup);
-}
-.p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container{
-  border: transparent;
 }
 
 /* Coloring command completion text */
@@ -1654,12 +1639,45 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
 }
 
 /* coloring search input preview text */
-.c-react_search_input:active .icon_search_wrapper *,
-.c-react_search_input:active .search_input_wrapper *,
-.c-react_search_input:focus .icon_search_wrapper *,
-.c-react_search_input:focus .search_input_wrapper *,
-.c-react_search_input:hover .icon_search_wrapper *,
-.c-react_search_input:hover .search_input_wrapper * {
+.c-react_search_input:active .icon_search_wrapper *, .c-react_search_input:active .search_input_wrapper *,
+.c-react_search_input:focus .icon_search_wrapper *, .c-react_search_input:focus .search_input_wrapper *,
+.c-react_search_input:hover .icon_search_wrapper *, .c-react_search_input:hover .search_input_wrapper * {
   color: var(--text) !important;
   font-weight: bold;
+}
+
+/* search form settings */
+.search_form,
+.search_form:hover,
+.p-channel_sidebar__jumper,
+div#search_container.c-react_search_input {
+  border: transparent;
+  background-color: var(--input-background);
+  border-radius: .35rem;
+}
+
+/* tidying up search modal */
+.c-search_autocomplete footer,
+.c-search,
+.c-search__tabs,
+.c-search__input_box,
+.c-search__input_and_close, {
+  background-color: var(--background-popup);
+}
+.c-search__input_and_close { border-bottom: none; }
+.c-search__input_and_close__close { margin-right: 10px; }
+.c-search__input_box { padding: 0 0 0 33px; }
+.c-search__input_box__clear { padding: 0 10px; }
+.c-search__input_box__icon { padding-right: 11px; }
+.c-search__input_box .c-search__input_box__input {
+  height: 26px;
+  padding: 2px 2px 0 7px;
+}
+.c-search_autocomplete__suggestion_item { color: var(--text-read); }
+.c-search_autocomplete__suggestion_item--selected { background: var(--primary); }
+.c-search_autocomplete footer { margin-top: 0px; }
+
+/* rounding icon in search modal */
+.c-team .c-team__icon, .c-unified_member .member_image, .c-usergroup .c-usergroup__icon {
+  border-radius: 50%;
 }

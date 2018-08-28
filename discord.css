@@ -1652,3 +1652,14 @@ div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
 .tab_complete_ui ul.type_cmds .cmdname{
   color: var(--text-special);
 }
+
+/* coloring search input preview text */
+.c-react_search_input:active .icon_search_wrapper *,
+.c-react_search_input:active .search_input_wrapper *,
+.c-react_search_input:focus .icon_search_wrapper *,
+.c-react_search_input:focus .search_input_wrapper *,
+.c-react_search_input:hover .icon_search_wrapper *,
+.c-react_search_input:hover .search_input_wrapper * {
+  color: var(--text) !important;
+  font-weight: bold;
+}

@@ -48,6 +48,12 @@ h1, h2, h3, h4 {
 body {
     background: var(--background);
     color: var(--text);
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-style: normal;
+    line-height: 16px !important;
+    text-rendering: optimizeLegibility !important;
+    font-weight: 500 !important;
 }
 hr {
     border: 0;
@@ -100,6 +106,7 @@ nav.p-channel_sidebar {
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__quickswitcher:hover {
    color: var(--text-bright) !important;
+   font-weight: 700;
 }
 
 /*broken*/
@@ -129,6 +136,7 @@ ts-jumper input[type="text"],
 }
 .c-message--light .c-message__sender .c-message__sender_link {
     color: var(--text);
+    font-weight: 700;
 }
 .c-message_list__day_divider__line {
     border-top: 1px solid var(--border-dim);
@@ -211,7 +219,7 @@ ts-jumper input[type="text"],
    border: transparent;
    border-width: 1px 1px 1px 0;
    color: var(--text-bright) !important;
-   font-weight: 900;
+   font-weight: 700;
 }
 
 .p-channel_sidebar__close_container {
@@ -1591,11 +1599,16 @@ div#menu {
     padding-bottom: 5px;
     border-bottom: 1px solid;
     border-color: var(--team-picker) !important;
+    font-weight: 700;
 }
 .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
 .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
     border-bottom: 1px solid;
     border-color: var(--team-picker) !important;
+}
+
+#channel_title, #im_title, .dm_title {
+  font-weight: 700 !important;
 }
 
 /* change team menu header color on hover */

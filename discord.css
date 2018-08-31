@@ -1574,28 +1574,40 @@ a.channel_link, a.group_link {
 /* discord theme specific settings */
 
 /* message separators */
-.c-message {
-	border-top: solid;
-	border-top-width: 1px;
-	border-top-color: var(--message-separator);
+.c-message--light {
+	border-top: 1px solid var(--message-separator);
 }
-
-.c-message--light
-.c-message--light.c-message--adjacent
+.c-message--light.c-message--adjacent {
+  border-top: none;
+  padding-top: none;
+  padding-bottom: none;
+  margin-top: -5px;
+}
+.c-message--light .c-message__content_header {
+    margin: 0px 0 3px;
+}
+.c-timestamp__label {
+    font-size: 12px;
+}
 
 /* adjust avatar spacing */
 .c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter {
-	padding-right: 8px;
+	padding-right: 0px;
 	width: 60px;
 }
 .c-message--light .c-message__content {
 	margin-left: 68px;
+  margin-top: 0px;
+  padding-bottom: 5px;
 }
 .c-avatar__emoji, .c-avatar__image {
 	border-radius: 50%;
 	display: block;
 	height: 100% !important;
 	width: 100% !important;
+}
+.c-message__avatar {
+    margin-right: 8px;
 }
 
 /* set bot username to same color as others */

@@ -78,9 +78,9 @@ hr {
 /*nav.p-channel_sidebar {*/
 div.client_channels_list_container {
    background-color: var(--background-elevated) !important;
-   box-shadow: var(--background-elevated) 1px 1px 25px;
+   /* box-shadow: var(--background-elevated) 1px 1px 25px; */
    color: var(--text-read);
-   z-index: 1;
+   /* z-index: 1; */
 }
 
 nav.p-channel_sidebar {
@@ -289,7 +289,7 @@ li.active[class] span,
 
 #client_body::before, #client_body:not(.onboarding):before {
   border-bottom: 1px solid var(--border-dim) !important;
-  background: var(--background);
+  background: var(--background) !important;
   box-shadow: none;
 }
 
@@ -358,7 +358,7 @@ ts-message {
 }
 
 ts-message:hover {
-   background: var(--background-hover) !important;
+   /* background: var(--background-hover) !important; */
 }
 
 #messages_container::after {
@@ -925,8 +925,10 @@ ts-thread .view_all_replies_container:hover {
    color: var(--text);
    border-color: var(--border-dim);
 }
-.unread_group_header button {
-   color: var(--text-special);
+.unread_group_header button,
+.unread_group_header .unread_group_collapse_caret .ts_icon_caret_down,
+.unread_group_header .unread_group_collapse_caret .ts_icon_caret_right {
+   color: var(--text-special) !important;
 }
 
 div.unread_group_footer {
@@ -1703,7 +1705,7 @@ div#search_container.c-react_search_input {
 .c-search__tabs,
 .c-search__input_box,
 .c-search__input_and_close {
-  background-color: var(--background-popup);
+  background-color: var(--background-popup) !important;
 }
 .c-search__input_and_close { border-bottom: none; }
 .c-search__input_and_close__close { margin-right: 10px; }
@@ -1715,10 +1717,27 @@ div#search_container.c-react_search_input {
   padding: 2px 2px 0 7px;
 }
 .c-search_autocomplete__suggestion_item { color: var(--text-read); }
-.c-search_autocomplete__suggestion_item--selected { background: var(--primary); }
+.c-search_autocomplete__suggestion_item--selected {
+  background: var(--primary);
+  color: var(--text);
+}
 .c-search_autocomplete footer { margin-top: 0px; }
 
 /* rounding icon in search modal */
 .c-team .c-team__icon, .c-unified_member .member_image, .c-usergroup .c-usergroup__icon {
   border-radius: 50%;
+}
+
+/* All Unreads channel settings */
+#unread_msgs_div .day_divider .day_divider_line {
+    border-top: 1px solid var(--border-dim);
+}
+.unread_group_footer .unread_group_new .unread_group_new_text {
+    color: var(--text-special);
+}
+.unread_group_footer .unread_group_new:hover .unread_group_new_text {
+    color: var(--text-special);
+}
+.rxn.rxn_add_btn .c-icon--small-reaction {
+    color: var(--text-read);
 }

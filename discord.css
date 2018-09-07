@@ -288,9 +288,13 @@ li.active[class] span,
 }
 
 #client_body::before, #client_body:not(.onboarding):before {
+  height: 7px;
   border-bottom: 1px solid var(--border-dim) !important;
   background: var(--background) !important;
   box-shadow: none;
+}
+.p-message_pane {
+  padding-left: 0px;
 }
 
 #client_body, #messages_container.has_top_messages_banner:before {

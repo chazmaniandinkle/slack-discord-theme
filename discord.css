@@ -1527,6 +1527,10 @@ ts-jumper .p-jumper__help {
   color: var(--text);
 }
 
+.c-message_attachment__author {
+  color: var(--text);
+}
+
 /* message marked as read */
 .unread_group_header.display_flex.justify_content_between {
   background: var(--background);

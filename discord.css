@@ -1763,3 +1763,9 @@ div#search_container.c-react_search_input {
 .unread_group_header_name a {
   color: var(--text);
 }
+
+/* Color the loading background */
+.unread_msgs_loading{
+  background-color: var(--background);
+  background-image: none;
+}

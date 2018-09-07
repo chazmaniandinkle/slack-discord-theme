@@ -1593,28 +1593,33 @@ a.channel_link, a.group_link {
 }
 
 /* adjust avatar spacing */
-.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter {
+.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter,
+ts-message .message_gutter {
 	padding-right: 0px;
 	width: 60px;
 }
-.c-message--light .c-message__content {
+.c-message--light .c-message__content,
+.light_theme ts-message .message_content {
 	margin-left: 68px;
   margin-top: 0px;
   padding-bottom: 5px;
 }
-.c-avatar__emoji, .c-avatar__image {
+.c-avatar__emoji, .c-avatar__image,
+.member_image {
 	border-radius: 50%;
 	display: block;
 	height: 100% !important;
 	width: 100% !important;
 }
-.c-message__avatar {
+.c-message__avatar,
+.message__icon {
     margin-right: 8px;
 }
 
 /* set bot username to same color as others */
-.bot_message .message_sender, .bot_message .message_sender a{
+.bot_message .message_sender, .bot_message .message_sender a {
   color: var(--text);
+  font-weight: 700 !important;
 }
 
 /* add thin bottom border to channel header pane */
@@ -1630,8 +1635,11 @@ a.channel_link, a.group_link {
     border-color: var(--team-picker) !important;
 }
 
-#channel_title, #im_title, .dm_title {
+#channel_title, #im_title, .dm_title,
+.unread_group_header_name a, .channel_link, .channel_name,
+.light_theme ts-message .message_content a.message_sender {
   font-weight: 700 !important;
+  color: var(--text);
 }
 
 /* change team menu header color on hover */
@@ -1740,4 +1748,7 @@ div#search_container.c-react_search_input {
 }
 .rxn.rxn_add_btn .c-icon--small-reaction {
     color: var(--text-read);
+}
+.unread_group_header_name a {
+  color: var(--text);
 }

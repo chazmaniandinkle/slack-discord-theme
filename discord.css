@@ -352,9 +352,9 @@ textarea:focus, input[type="text"]:focus, #file_comment_textarea {
 }
 
 ts-message {
-   border-radius: 5px;
-   margin: 1px 5px !important;
-   box-shadow: none !important;
+   /* border-radius: 5px; */
+   /* margin: 1px 5px !important; */
+   /* box-shadow: none !important; */
 }
 
 ts-message:hover {
@@ -1576,13 +1576,15 @@ a.channel_link, a.group_link {
 /* discord theme specific settings */
 
 /* message separators */
-.c-message--light {
+.c-message--light,
+ts-message.message.feature_fix_files.first {
 	border-top: 1px solid var(--message-separator);
+  padding: 6px 0 0 0;
 }
-.c-message--light.c-message--adjacent {
+.c-message--light.c-message--adjacent,
+ts-message.message.feature_fix_files {
   border-top: none;
-  padding-top: none;
-  padding-bottom: none;
+  padding-top: 0px;
   margin-top: -5px;
 }
 .c-message--light .c-message__content_header {
@@ -1608,12 +1610,19 @@ ts-message .message_gutter {
 .member_image {
 	border-radius: 50%;
 	display: block;
-	height: 100% !important;
-	width: 100% !important;
+  height: 36px !important;
+  width: 36px !important;
+  line-height: 36px;
 }
-.c-message__avatar,
-.message__icon {
+.c-message__avatar {
     margin-right: 8px;
+    margin-left: 16px;
+}
+.message__icon,
+.light_theme ts-message .message_icon {
+  margin-right: 8px;
+  margin-left: 16px;
+  margin-top: 6px !important;
 }
 
 /* set bot username to same color as others */
@@ -1637,7 +1646,8 @@ ts-message .message_gutter {
 
 #channel_title, #im_title, .dm_title,
 .unread_group_header_name a, .channel_link, .channel_name,
-.light_theme ts-message .message_content a.message_sender {
+.light_theme ts-message .message_content a.message_sender,
+.p-channel_sidebar__link--unread .p-channel_sidebar__name {
   font-weight: 700 !important;
   color: var(--text);
 }
@@ -1666,6 +1676,7 @@ body:not(.loading) #team_menu:active {
 /* changing color of unread messages banner */
 .p-message_pane__unread_banner {
   background: var(--notification);
+  font-weight: 700 !important;
 }
 
 /* Theming emoji picker popup */

@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 :root {
-  --primary: rgb(97, 175, 239);
+  --primary: rgba(108, 130, 203, 0.9);
   --text: rgb(220, 221, 222);
   --text-read: rgb(114, 118, 125);
   --background: rgb(53, 56, 63);
@@ -35,7 +35,7 @@ limitations under the License.
   --scrollbar-track: rgb(47, 49, 54);
   --input-background: rgb(72, 75, 81);
   --message-separator: rgb(62, 65, 71);
-  --notification: rgba(108, 130, 203, 0.9);
+  --notification: var(--primary);
   --channel-active: rgb(65,69,77);
 }
 
@@ -48,6 +48,12 @@ h1, h2, h3, h4 {
 body {
     background: var(--background);
     color: var(--text);
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-style: normal;
+    line-height: 16px !important;
+    text-rendering: optimizeLegibility !important;
+    font-weight: 500 !important;
 }
 hr {
     border: 0;
@@ -72,9 +78,9 @@ hr {
 /*nav.p-channel_sidebar {*/
 div.client_channels_list_container {
    background-color: var(--background-elevated) !important;
-   box-shadow: var(--background-elevated) 1px 1px 25px;
+   /* box-shadow: var(--background-elevated) 1px 1px 25px; */
    color: var(--text-read);
-   z-index: 1;
+   /* z-index: 1; */
 }
 
 nav.p-channel_sidebar {
@@ -100,6 +106,7 @@ nav.p-channel_sidebar {
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__quickswitcher:hover {
    color: var(--text-bright) !important;
+   font-weight: 700;
 }
 
 /*broken*/
@@ -129,6 +136,7 @@ ts-jumper input[type="text"],
 }
 .c-message--light .c-message__sender .c-message__sender_link {
     color: var(--text);
+    font-weight: 700;
 }
 .c-message_list__day_divider__line {
     border-top: 1px solid var(--border-dim);
@@ -162,11 +170,12 @@ ts-jumper input[type="text"],
 	background-color: var(--background-elevated) !important;
 } */
 .c-member_slug--link {
-    background: var(--background-elevated);
+    background: var(--background);
+    color: var(--notification);
 }
 
 .channel_header, #col_messages, #footer {
-   box-shadow: none;
+    box-shadow: none;
 }
 /* buttons */
 .btn.disabled, .btn.disabled:active, .btn.disabled:hover, .btn:disabled, .btn:disabled:active, .btn:disabled:hover {
@@ -210,7 +219,7 @@ ts-jumper input[type="text"],
    border: transparent;
    border-width: 1px 1px 1px 0;
    color: var(--text-bright) !important;
-   font-weight: 900;
+   font-weight: 700;
 }
 
 .p-channel_sidebar__close_container {
@@ -280,7 +289,7 @@ li.active[class] span,
 
 #client_body::before, #client_body:not(.onboarding):before {
   border-bottom: 1px solid var(--border-dim) !important;
-  background: var(--background);
+  background: var(--background) !important;
   box-shadow: none;
 }
 
@@ -343,13 +352,13 @@ textarea:focus, input[type="text"]:focus, #file_comment_textarea {
 }
 
 ts-message {
-   border-radius: 5px;
-   margin: 1px 5px !important;
-   box-shadow: none !important;
+   /* border-radius: 5px; */
+   /* margin: 1px 5px !important; */
+   /* box-shadow: none !important; */
 }
 
 ts-message:hover {
-   background: var(--background-hover) !important;
+   /* background: var(--background-hover) !important; */
 }
 
 #messages_container::after {
@@ -518,9 +527,9 @@ code {
   background-color: transparent !important;
 }
 
-a, a:link, a:visited{
+/* a, a:link, a:visited{
   color: var(--text-special);
-}
+} */
 ts-message a .mention{
   color: var(--text-special) !important;
 }
@@ -634,29 +643,29 @@ ts-mention.ts_tip:hover
 }
 
 /* emojis */
-.rxn[data-emoji] {
-   /*background-color: var(--background-light) !important;
-   transition: background-color 200ms ease-in;*/
+/* .rxn[data-emoji] {
+   background-color: var(--background-light) !important;
+   transition: background-color 200ms ease-in;
    height: 28px;
-}
+} */
 
-.rxn[data-emoji]:hover {
-   /*background-color: var(--background-bright) !important;*/
-}
+/* .rxn[data-emoji]:hover {
+   background-color: var(--background-bright) !important;
+} */
 
-.rxn[data-emoji] .emoji_rxn_count {
+/* .rxn[data-emoji] .emoji_rxn_count {
    font-size: 0.9rem;
-   /*color: black !important;*/
-}
+   color: black !important;
+} */
 
-.rxn .emoji-sizer {
+/* .rxn .emoji-sizer {
   background-color: transparent !important;
   border-radius: 7px;
   width: 24px;
   height: 24px;
   margin: 0 0 0 -2px !important;
-  border: 1px solid transparent; /* looks silly but it makes the outline work */
-}
+  border: 1px solid transparent;
+} */
 
 .emoji-sizer {
    /* outline for black-on-transparent emojis */
@@ -664,7 +673,7 @@ ts-mention.ts_tip:hover
                    drop-shadow(-1px  0 0 var(--background))
                    drop-shadow(-0  1px 0 var(--background))
                    drop-shadow( 0 -1px 0 var(--background));
-   margin: 0 !important;
+   /* margin: 0 !important; */
 }
 
 .ts_icon.ts_icon_smile_o {
@@ -916,8 +925,10 @@ ts-thread .view_all_replies_container:hover {
    color: var(--text);
    border-color: var(--border-dim);
 }
-.unread_group_header button {
-   color: var(--text-special);
+.unread_group_header button,
+.unread_group_header .unread_group_collapse_caret .ts_icon_caret_down,
+.unread_group_header .unread_group_collapse_caret .ts_icon_caret_right {
+   color: var(--text-special) !important;
 }
 
 div.unread_group_footer {
@@ -1098,14 +1109,10 @@ ts-jumper ts-jumper-container {
     background: var(--background-elevated);
 }
 /* new search modal */
-.c-search_autocomplete footer,
 .c-search,
-.c-search__tabs,
-.c-search__input_box { background-color: var(--input-background); }
-
-.c-search,
-.c-search__tabs,
-.c-search__input_and_close__close { color: unset; }
+.c-search__tabs {
+  color: unset;
+}
 .p-message_limit_banner {
     color: unset;
     background-color: unset;
@@ -1125,7 +1132,9 @@ ts-jumper ts-jumper-container {
 .token {
 	background-color: var(--background-elevated) !important;
 }
-.c-search_modal .popover>div { background-color: var(--background); }
+.c-search_modal .popover>div {
+  background-color: var(--background);
+}
 
 .c-search_autocomplete__suggestion_content {
     color: var(--text-bright);
@@ -1545,39 +1554,81 @@ div#menu {
   color: var(--text) !important;
 }
 
+/* removing limited history pane */
+.p-message_pane__limited_history_foreword {
+  visibility: hidden;
+  padding: unset;
+  height: 0px;
+  margin-bottom: 0px;
+}
+
+/* fixing color of channel foreword */
+.p-message_pane__foreword__description {
+  color: inherit;
+}
+
+/* fixing color of channel and group names in "all unreads" */
+a.channel_link, a.group_link {
+    color: var(--text);
+}
+
 /* ---------------------------------------------------------------------------------- */
 /* discord theme specific settings */
 
 /* message separators */
-.c-message {
-	border-top: solid;
-	border-top-width: 1px;
-	border-top-color: var(--message-separator);
+.c-message--light,
+ts-message.message.feature_fix_files.first {
+	border-top: 1px solid var(--message-separator);
+  padding: 6px 0 0 0;
+}
+.c-message--light.c-message--adjacent,
+ts-message.message.feature_fix_files {
+  border-top: none;
+  padding-top: 0px;
+  margin-top: -5px;
+}
+.c-message--light .c-message__content_header {
+    margin: 0px 0 3px;
+}
+.c-timestamp__label {
+    font-size: 12px;
 }
 
 /* adjust avatar spacing */
-.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter {
-	padding-right: 8px;
+.c-message--light .c-message__gutter, .c-message--light .c-message__label__gutter,
+ts-message .message_gutter {
+	padding-right: 0px;
 	width: 60px;
 }
-.c-message--light .c-message__content {
+.c-message--light .c-message__content,
+.light_theme ts-message .message_content {
 	margin-left: 68px;
+  margin-top: 0px;
+  padding-bottom: 5px;
 }
-.c-avatar__emoji, .c-avatar__image {
-	border-radius: 20px;
+.c-avatar__emoji, .c-avatar__image,
+.member_image {
+	border-radius: 50%;
 	display: block;
-	height: 100% !important;
-	width: 100% !important;
+  height: 36px !important;
+  width: 36px !important;
+  line-height: 36px;
 }
-
-.search_form, .search_form:hover {
-  border: 1px solid var(--input-background);
-  border-color: transparent;
+.c-message__avatar {
+    margin-right: 8px;
+    margin-left: 16px;
+}
+.message__icon,
+.light_theme ts-message .message_icon {
+  margin-right: 8px;
+  margin-left: 16px;
+  margin-top: 6px !important;
 }
 
 /* set bot username to same color as others */
-.bot_message .message_sender, .bot_message .message_sender a{
+.bot_message .message_sender, .bot_message .message_sender a {
   color: var(--text);
+  font-weight: 700 !important;
 }
 
 /* add thin bottom border to channel header pane */
@@ -1585,11 +1636,20 @@ div#menu {
     padding-bottom: 5px;
     border-bottom: 1px solid;
     border-color: var(--team-picker) !important;
+    font-weight: 700;
 }
 .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before,
 .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
     border-bottom: 1px solid;
     border-color: var(--team-picker) !important;
+}
+
+#channel_title, #im_title, .dm_title,
+.unread_group_header_name a, .channel_link, .channel_name,
+.light_theme ts-message .message_content a.message_sender,
+.p-channel_sidebar__link--unread .p-channel_sidebar__name {
+  font-weight: 700 !important;
+  color: var(--text);
 }
 
 /* change team menu header color on hover */
@@ -1613,8 +1673,99 @@ body:not(.loading) #team_menu:active {
   border-radius: 4px 4px 4px 4px;
 }
 
-/* Removing background behind preview text in search bar */
-div#search_container.c-react_search_input, .p-channel_sidebar__jumper {
+/* changing color of unread messages banner */
+.p-message_pane__unread_banner {
+  background: var(--notification);
+  font-weight: 700 !important;
+}
+
+/* Theming emoji picker popup */
+.p-emoji_picker__heading,
+.p-emoji_picker__list_container,
+.p-emoji_picker__input_container,
+.p-emoji_picker__group_tab--active,
+.p-emoji_picker__skintone_btn_container,
+.p-emoji_picker__skintone_options,
+.p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container {
+  background: var(--background);
+}
+.c-menu.p-emoji_picker,
+.p-emoji_picker__footer,
+.p-emoji_picker__heading.p-emoji_picker__heading--handy_rxns {
+  background: var(--background-popup);
+}
+
+/* Coloring command completion text */
+.tab_complete_ui ul.type_cmds .cmdname{
+  color: var(--text-special);
+}
+
+/* coloring search input preview text */
+.c-react_search_input:active .icon_search_wrapper *, .c-react_search_input:active .search_input_wrapper *,
+.c-react_search_input:focus .icon_search_wrapper *, .c-react_search_input:focus .search_input_wrapper *,
+.c-react_search_input:hover .icon_search_wrapper *, .c-react_search_input:hover .search_input_wrapper * {
+  color: var(--text) !important;
+  font-weight: bold;
+}
+
+/* search form settings */
+.search_form,
+.search_form:hover,
+.p-channel_sidebar__jumper,
+div#search_container.c-react_search_input {
+  border: transparent;
   background-color: var(--input-background);
-  border-color: transparent;
+  border-radius: .35rem;
+}
+
+/* tidying up search modal */
+.c-search_autocomplete footer,
+.c-search,
+.c-search__tabs,
+.c-search__input_box,
+.c-search__input_and_close {
+  background-color: var(--background-popup) !important;
+}
+.c-search__input_and_close { border-bottom: none; }
+.c-search__input_and_close__close { margin-right: 10px; }
+.c-search__input_box { padding: 0 0 0 33px; }
+.c-search__input_box__clear { padding: 0 10px; }
+.c-search__input_box__icon { padding-right: 11px; }
+.c-search__input_box .c-search__input_box__input {
+  height: 26px;
+  padding: 2px 2px 0 7px;
+}
+.c-search_autocomplete__suggestion_item { color: var(--text-read); }
+.c-search_autocomplete__suggestion_item--selected {
+  background: var(--primary);
+  color: var(--text);
+}
+.c-search_autocomplete footer { margin-top: 0px; }
+
+/* rounding icon in search modal */
+.c-team .c-team__icon, .c-unified_member .member_image, .c-usergroup .c-usergroup__icon {
+  border-radius: 50%;
+}
+
+/* All Unreads channel settings */
+#unread_msgs_div .day_divider .day_divider_line {
+    border-top: 1px solid var(--border-dim);
+}
+.unread_group_footer .unread_group_new .unread_group_new_text {
+    color: var(--text-special);
+}
+.unread_group_footer .unread_group_new:hover .unread_group_new_text {
+    color: var(--text-special);
+}
+.rxn.rxn_add_btn .c-icon--small-reaction {
+    color: var(--text-read);
+}
+.unread_group_header_name a {
+  color: var(--text);
+}
+
+/* Color the loading background */
+.unread_msgs_loading{
+  background-color: var(--background);
+  background-image: none;
 }
